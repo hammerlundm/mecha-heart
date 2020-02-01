@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/light.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/object.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/heart.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -3.1, 0.3, 1.6, 0, 0, 0, 0, 0, 0, -4.1, -0.6, 11.8, 0, 0, 0, 0, 0, 0, -11.6, -0.2, 11.8, 0, 0, 0, 0, 0, 0, -11.7, -0.1, 3.6, 0, 0, 0, 0, 0, 0, -10.3, -0.2, 0.1, 0, 0, 0, 0, 0, 0, -5, -0.1, 1.1, 0, 0, 0, 0, 0, 0, -3.1, 0.3, 1.6 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0 )
+}
 
 [node name="Spatial" type="Spatial"]
 
@@ -19,3 +26,13 @@ part_name = "asdf"
 [node name="heart" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.33959, 0, -6.02789 )
 part_name = "asdf"
+
+[node name="Path" type="Path" parent="."]
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="Path"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 0, 1.8 )
+rotation_mode = 1
+
+[node name="enemy" parent="Path/PathFollow" instance=ExtResource( 5 )]
+MOVE_SPEED = 5.0
