@@ -28,7 +28,7 @@ func _process(delta):
 		v -= transform.basis.x * delta * MOVE_SPEED
 	if Input.is_action_pressed("move_right"):
 		v += transform.basis.x * delta * MOVE_SPEED
-	#v.y -= 5
+	v.y -= 9.8
 	if Input.is_action_pressed("interact"):
 		if object == null:
 			var objects = get_tree().get_nodes_in_group("object")

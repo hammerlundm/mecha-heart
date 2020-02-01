@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MMM_Loop.ogg-c499e7a45edd05d00be22aa687f0267c.oggstr"
+
+[deps]
+
+source_file="res://sounds/MMM_Loop.ogg"
+dest_files=[ "res://.import/MMM_Loop.ogg-c499e7a45edd05d00be22aa687f0267c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

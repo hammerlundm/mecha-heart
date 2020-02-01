@@ -14,3 +14,7 @@ func start_game():
 	
 func quit_game():
 	get_tree().quit()
+
+
+func _on_audio_start_finished():
+	$audio_loop.play()
