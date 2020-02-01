@@ -3,7 +3,7 @@ extends KinematicBody
 export(float) var MOVE_SPEED = 1000
 export(float) var TURN_SPEED = 0.001
 export(float) var FRICTION = 0.01
-export(float) var INTERACT_SIZE = 500
+export(float) var GRAVITY = 1000
 
 var v = Vector3(0, 0, 0)
 var angle = Vector2(0, 0)
@@ -20,21 +20,23 @@ func _process(delta):
 	transform.basis = Basis()
 	rotate(transform.basis.y, -angle.x)
 	rotate(transform.basis.x, -angle.y)
-	if Input.is_action_pressed("move_forward"):
-		v -= transform.basis.z * delta * MOVE_SPEED
-	if Input.is_action_pressed("move_back"):
-		v += transform.basis.z * delta * MOVE_SPEED
-	if Input.is_action_pressed("move_left"):
-		v -= transform.basis.x * delta * MOVE_SPEED
-	if Input.is_action_pressed("move_right"):
-		v += transform.basis.x * delta * MOVE_SPEED
-	#v.y -= 5
+	var v2 = Vector2(0, 0)
+	v2.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	v2.y = Input.get_action_strength("move_back") - Input.get_action_strength("move_forward")
+	v2 = v2.normalized()
+	var asdf = v2.x * transform.basis.x + v2.y * transform.basis.z
+	var flat = asdf - (asdf.dot(Vector3(0, 1, 0)) * Vector3(0, 1, 0))
+	v += flat.normalized() * delta * MOVE_SPEED
+	if is_on_wall():
+		if Input.is_action_pressed("jump"):
+			v.y += 1000 * delta
+	else:
+		v.y -= GRAVITY * delta
 	if Input.is_action_pressed("interact"):
 		if object == null:
 			var objects = get_tree().get_nodes_in_group("object")
 			for obj in objects:
 				if obj.selected:
-					print("!!!")
 					object = obj
 					obj.get_parent().remove_child(obj)
 					add_child(obj)
@@ -50,6 +52,10 @@ func _process(delta):
 func _input(event):
 	if event is InputEventMouseMotion:
 		angle += event.relative * TURN_SPEED
+		if angle.y > PI/2:
+			angle.y = PI/2
+		if angle.y < -PI/2:
+			angle.y = -PI/2
 
 func select(area):
 	var groups = area.get_parent().get_groups()

@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape" id=1]
 
 [sub_resource type="RayShape" id=2]
-length = 10.0
+length = 2.0
 
 [node name="player" type="KinematicBody"]
 script = ExtResource( 1 )
