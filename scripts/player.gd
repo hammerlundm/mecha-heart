@@ -4,12 +4,15 @@ export(float) var MOVE_SPEED = 1000
 export(float) var TURN_SPEED = 0.001
 export(float) var FRICTION = 0.01
 export(float) var INTERACT_SIZE = 500
+export(float) var HEALTH = 3
 
 var v = Vector3(0, 0, 0)
 var angle = Vector2(0, 0)
 var old_pos = Vector2(0, 0)
 
 var object = null
+var targetable = true
+var current_health = HEALTH
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -46,6 +49,7 @@ func _process(delta):
 						object = null
 	v *= FRICTION / (delta + 0.01)
 	move_and_slide(v)
+	
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -60,3 +64,7 @@ func deselect(area):
 	var groups = area.get_parent().get_groups()
 	if groups.has("object") or groups.has("heart"):
 		area.get_parent().selected = false
+		
+func hit():
+	current_health -= 1
+	print(current_health)

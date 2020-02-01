@@ -1,15 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/enemy.gd" type="Script" id=1]
 [ext_resource path="res://sounds/Enemy_Ambient.ogg" type="AudioStream" id=2]
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=1]
 
 [sub_resource type="CubeMesh" id=5]
 
-[sub_resource type="CapsuleShape" id=2]
+[sub_resource type="CapsuleShape" id=6]
 
-[sub_resource type="CapsuleMesh" id=3]
+[sub_resource type="CapsuleMesh" id=4]
+
+[sub_resource type="BoxShape" id=7]
+
+[sub_resource type="CubeMesh" id=8]
 
 [node name="enemy" type="KinematicBody"]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
@@ -19,7 +23,7 @@ script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="vision"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 5, 0, 0, 6 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="vision/CollisionShape"]
 visible = false
@@ -27,10 +31,10 @@ mesh = SubResource( 5 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 6 )
 
 [node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
-mesh = SubResource( 3 )
+mesh = SubResource( 4 )
 material/0 = null
 
 [node name="OmniLight" type="OmniLight" parent="."]
@@ -42,3 +46,15 @@ transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
 stream = ExtResource( 2 )
 unit_db = 5.0
 autoplay = true
+
+[node name="touch" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.462548 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="touch"]
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="touch/CollisionShape"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0810554 )
+mesh = SubResource( 8 )
+material/0 = null
