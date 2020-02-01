@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/light.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleMesh" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0118, 2.93187, 5.51071 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89074, -0.769131, -4.71814 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.153004, -1.68772, -10.4643 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="WallLight" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.539564, 0, -0.841944, 0, 1, 0, 0.841944, 0, 0.539564, 8.16513, -1.68772, -6.29291 )
