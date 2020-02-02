@@ -119,3 +119,4 @@ curve = SubResource( 7 )
 [node name="PathFollow" type="PathFollow" parent="Path"]
 
 [node name="enemy" parent="Path/PathFollow" instance=ExtResource( 2 )]
+MOVE_SPEED = 5.0
