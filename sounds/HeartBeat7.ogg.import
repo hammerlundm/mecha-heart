@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HeartBeat7.ogg-94f99abc071422e6d3c3a115c55c26aa.oggstr"
+
+[deps]
+
+source_file="res://sounds/HeartBeat7.ogg"
+dest_files=[ "res://.import/HeartBeat7.ogg-94f99abc071422e6d3c3a115c55c26aa.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
