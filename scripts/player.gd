@@ -57,9 +57,7 @@ func _process(delta):
 					if part.place(object):
 						points += 1
 						if points >= 3:
-							#TODO: add real win state
-							print("you win!")
-							get_tree().quit()
+							get_tree().change_scene("res://scenes/win.tscn")
 						object = null
 						break
 	v *= FRICTION / (delta + 0.01)
@@ -85,4 +83,5 @@ func deselect(area):
 		
 func hit():
 	current_health -= 1
-	print(current_health)
+	if current_health <= 0:
+		get_tree().change_scene("res://scenes/dead.tscn")
