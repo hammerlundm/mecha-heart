@@ -4,7 +4,7 @@ export(float) var MOVE_SPEED = 1000
 export(float) var TURN_SPEED = 0.001
 export(float) var FRICTION = 0.01
 export(float) var GRAVITY = 1000
-export(float) var HEALTH = 3
+export(float) var HEALTH = 1
 
 var tracks = [preload("res://sounds/Heartbeat1.ogg"), preload("res://sounds/Heartbeat2.ogg"), preload("res://sounds/Heartbeat3.ogg"), preload("res://sounds/Heartbeat4.ogg"), preload("res://sounds/Heartbeat5.ogg"), preload("res://sounds/Heartbeat6.ogg")]
 
@@ -65,6 +65,9 @@ func _process(delta):
 							get_tree().change_scene("res://scenes/win.tscn")
 						object = null
 						break
+	if Input.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+		get_tree().change_scene("res://scenes/mainMenu.tscn")
 	v *= FRICTION / (delta + 0.01)
 	move_and_slide(v)
 
