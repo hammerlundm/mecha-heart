@@ -38,12 +38,14 @@ ambient_light_sky_contribution = 0.0
 [node name="player" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9663, 10.2845, 26.2687 )
 MOVE_SPEED = 400.0
+HEALTH = 1.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.232716, 43.6985, 0 )
+light_color = Color( 0.980392, 0.945098, 0.870588, 1 )
 light_energy = 3.0
 shadow_enabled = true
 omni_range = 100.0
@@ -51,7 +53,8 @@ omni_attenuation = 0.406126
 omni_shadow_mode = 0
 
 [node name="OmniLight2" type="OmniLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0635, -8.98279, -12.3234 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.4314, 7.83262, -17.2306 )
+light_color = Color( 0.878431, 0.619608, 0.254902, 1 )
 light_energy = 0.3
 shadow_enabled = true
 omni_range = 187.0
@@ -60,7 +63,7 @@ omni_shadow_mode = 0
 
 [node name="OmniLight3" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -65.4006, 7.43448, -18.1193 )
-light_color = Color( 0.984314, 0.984314, 0.984314, 1 )
+light_color = Color( 0.537255, 0.729412, 0.858824, 1 )
 light_energy = 0.3
 shadow_enabled = true
 omni_range = 187.0
@@ -68,8 +71,13 @@ omni_attenuation = 0.659754
 omni_shadow_mode = 0
 
 [node name="OmniLight4" type="OmniLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.351067, 15.5046, 8.16833 )
-omni_range = 30.0
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.78245, 10.0976, 12.8298 )
+omni_range = 40.0
+omni_shadow_mode = 0
+
+[node name="OmniLight5" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.17984, 10.018, 2.89913 )
+omni_range = 40.0
 omni_shadow_mode = 0
 
 [node name="safe" type="Area" parent="."]

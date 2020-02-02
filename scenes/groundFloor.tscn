@@ -39,6 +39,7 @@ shape = SubResource( 2 )
 
 [node name="Path" type="Path" parent="."]
 transform = Transform( 0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 97.4392, 1.4, -1.83166 )
+visible = false
 curve = SubResource( 3 )
 
 [node name="PathFollow" type="PathFollow" parent="Path"]

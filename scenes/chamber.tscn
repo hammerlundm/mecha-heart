@@ -1,6 +1,5 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://materials/bronze.tres" type="Material" id=1]
 [ext_resource path="res://scenes/HEARTMechanics.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/HEARTOrganic.tscn" type="PackedScene" id=3]
 [ext_resource path="res://materials/wall.tres" type="Material" id=4]
@@ -8,10 +7,8 @@
 [ext_resource path="res://scenes/strings_part.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/heart.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/HEARTGrate.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/object.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/HEARTValve.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/ticker_part.tscn" type="PackedScene" id=11]
-[ext_resource path="res://heartstrings2.obj" type="ArrayMesh" id=12]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube.008"
@@ -199,9 +196,3 @@ part_scene = ExtResource( 11 )
 [node name="valve" parent="Heart" instance=ExtResource( 7 )]
 part_name = "valve"
 part_scene = ExtResource( 10 )
-
-[node name="object" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.06727 )
-part_name = "strings"
-mesh = ExtResource( 12 )
-mat = ExtResource( 1 )

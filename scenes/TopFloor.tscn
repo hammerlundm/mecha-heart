@@ -221,6 +221,7 @@ material/0 = ExtResource( 1 )
 
 [node name="Path" type="Path" parent="."]
 transform = Transform( 1, 0, 2.45869e-07, 0, 1, 0, -2.45869e-07, 0, 1, 90.9372, 11.8, 19.6777 )
+visible = false
 curve = SubResource( 14 )
 
 [node name="PathFollow" type="PathFollow" parent="Path"]
