@@ -65,9 +65,9 @@ func _process(delta):
 							get_tree().change_scene("res://scenes/win.tscn")
 						object = null
 						break
-		if Input.is_action_pressed("ui_cancel"):
-			Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
-			get_tree().change_scene("res://scenes/mainMenu.tscn")
+	if Input.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+		get_tree().change_scene("res://scenes/mainMenu.tscn")
 	v *= FRICTION / (delta + 0.01)
 	move_and_slide(v)
 
