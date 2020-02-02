@@ -68,10 +68,10 @@ __meta__ = {
 }
 
 [node name="play_button" type="TextureButton" parent="."]
-margin_left = 371.023
-margin_top = 740.045
-margin_right = 845.023
-margin_bottom = 916.045
+margin_left = 371.397
+margin_top = 740.416
+margin_right = 845.397
+margin_bottom = 915.416
 texture_normal = ExtResource( 6 )
 expand = true
 __meta__ = {
@@ -79,12 +79,12 @@ __meta__ = {
 }
 
 [node name="p_button_close" type="Sprite" parent="play_button"]
-position = Vector2( 92.2268, 91.1567 )
+position = Vector2( 100.227, 93.1567 )
 scale = Vector2( 0.35717, 0.35717 )
 texture = ExtResource( 8 )
 
 [node name="p_button_close2" type="Sprite" parent="play_button"]
-position = Vector2( 380.316, 91.1567 )
+position = Vector2( 380.316, 89.1567 )
 scale = Vector2( 0.35717, 0.35717 )
 texture = ExtResource( 8 )
 

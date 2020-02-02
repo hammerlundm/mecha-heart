@@ -227,4 +227,3 @@ curve = SubResource( 14 )
 
 [node name="enemy" parent="Path/PathFollow" instance=ExtResource( 2 )]
 transform = Transform( -1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, 0, 0, 0 )
-MOVE_SPEED = 5.0

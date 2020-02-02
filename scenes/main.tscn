@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/TopFloor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/chamber.tscn" type="PackedScene" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://scenes/secondFloor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/groundFloor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/safe.gd" type="Script" id=6]
+[ext_resource path="res://scenes/object.tscn" type="PackedScene" id=7]
+[ext_resource path="res://materials/bronze.tres" type="Material" id=8]
+[ext_resource path="res://HEARTGrate.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://heartvalve.obj" type="ArrayMesh" id=10]
+[ext_resource path="res://heartgear2.obj" type="ArrayMesh" id=11]
+[ext_resource path="res://heartstrings2.obj" type="ArrayMesh" id=12]
+[ext_resource path="res://heartticker2.obj" type="ArrayMesh" id=13]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -29,7 +36,7 @@ ambient_light_sky_contribution = 0.0
 [node name="groundFloor" parent="." instance=ExtResource( 5 )]
 
 [node name="player" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9352, 11.4341, 26.4371 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9663, 10.2845, 26.2687 )
 MOVE_SPEED = 400.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -79,3 +86,33 @@ shape = SubResource( 2 )
 [node name="MeshInstance" type="MeshInstance" parent="safe/CollisionShape"]
 mesh = SubResource( 3 )
 material/0 = null
+
+[node name="gear" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.7382, 9.50098, -25.5088 )
+part_name = "gear"
+mesh = ExtResource( 11 )
+mat = ExtResource( 8 )
+
+[node name="valve" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.9176, 3.81858, -35.4788 )
+part_name = "valve"
+mesh = ExtResource( 10 )
+mat = ExtResource( 8 )
+
+[node name="grate" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.9622, 4.97977, 11.1854 )
+part_name = "grate"
+mesh = ExtResource( 9 )
+mat = ExtResource( 8 )
+
+[node name="strings" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.915, -1.13789, -3.04021 )
+part_name = "strings"
+mesh = ExtResource( 12 )
+mat = ExtResource( 8 )
+
+[node name="ticker" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 95.5631, -0.788089, -3.04021 )
+part_name = "ticker"
+mesh = ExtResource( 13 )
+mat = ExtResource( 8 )

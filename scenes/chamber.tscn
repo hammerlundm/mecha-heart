@@ -11,7 +11,7 @@
 [ext_resource path="res://scenes/object.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/HEARTValve.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/ticker_part.tscn" type="PackedScene" id=11]
-[ext_resource path="res://heartvalve.obj" type="ArrayMesh" id=12]
+[ext_resource path="res://heartstrings2.obj" type="ArrayMesh" id=12]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube.008"
@@ -201,7 +201,7 @@ part_name = "valve"
 part_scene = ExtResource( 10 )
 
 [node name="object" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.342777, 12.4025 )
-part_name = "valve"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.06727 )
+part_name = "strings"
 mesh = ExtResource( 12 )
 mat = ExtResource( 1 )
