@@ -34,7 +34,7 @@ func _process(delta):
 		if Input.is_action_pressed("jump"):
 			v.y += 1000 * delta
 	else:
-		#v.y -= GRAVITY * delta
+		v.y -= GRAVITY * delta
 		pass
 	if Input.is_action_pressed("interact"):
 		if object == null:
