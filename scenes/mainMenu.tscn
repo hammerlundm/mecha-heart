@@ -68,14 +68,10 @@ __meta__ = {
 }
 
 [node name="play_button" type="TextureButton" parent="."]
-anchor_left = 0.333
-anchor_top = 0.52
-anchor_right = 0.667
-anchor_bottom = 0.647
-margin_left = -268.36
-margin_top = 178.4
-margin_right = -435.64
-margin_bottom = 217.24
+margin_left = 371.023
+margin_top = 740.045
+margin_right = 845.023
+margin_bottom = 916.045
 texture_normal = ExtResource( 6 )
 expand = true
 __meta__ = {
