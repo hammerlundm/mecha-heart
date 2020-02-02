@@ -36,6 +36,7 @@ light_energy = 3.0
 shadow_enabled = true
 omni_range = 100.0
 omni_attenuation = 0.406126
+omni_shadow_mode = 0
 
 [node name="OmniLight2" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0635, -8.98279, -12.3234 )
@@ -43,6 +44,7 @@ light_energy = 0.3
 shadow_enabled = true
 omni_range = 187.0
 omni_attenuation = 0.517632
+omni_shadow_mode = 0
 
 [node name="OmniLight3" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -65.4006, 7.43448, -18.1193 )
@@ -51,7 +53,9 @@ light_energy = 0.3
 shadow_enabled = true
 omni_range = 187.0
 omni_attenuation = 0.659754
+omni_shadow_mode = 0
 
 [node name="OmniLight4" type="OmniLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.3079, 8.16833 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.351067, 15.5046, 8.16833 )
 omni_range = 30.0
+omni_shadow_mode = 0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/artdecogate.obj-e10c1ff7fcf36a91d991af668d233b6c.mesh"
+
+[deps]
+
+files=[ "res://.import/artdecogate.obj-e10c1ff7fcf36a91d991af668d233b6c.mesh" ]
+
+source_file="res://artdecogate.obj"
+dest_files=[ "res://.import/artdecogate.obj-e10c1ff7fcf36a91d991af668d233b6c.mesh", "res://.import/artdecogate.obj-e10c1ff7fcf36a91d991af668d233b6c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
