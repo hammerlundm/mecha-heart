@@ -143,31 +143,36 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.45098, 0.239216, 0.0666667, 1 )
-text = "Credits
-Programming
-Austin Giebler
+text = "// CREDITS \\\\
+
+PROGRAMMING
+Austin Griebler
 Chase Ingebritson
 Max Hammerlund
 Matthew Wiltzius
 
-Art
+ART
 Annie Polome
 Angela Duich
 Erin Powers-Kim
 
-Audio/Level Design
+AUDIO/LEVEL DESIGN
 John Bode
 
-Additional Audio Credits
+ADDITIONAL AUDIO CREDITS
 \"Heartbeat, Regular, Single, 01-01, LOOP.wav\" by InspectorJ (www.jshaw.co.uk) of Freesound.org
 \"Noisy Old Elevator\" by Oneirophile of Freesound.org
 \"Distant Ancient Machinery\" by Nebyoolae of Freesound.org
 \"Echo Footsteps on Tile\" by Narrative-svad of Freesound.org
 \"Myst on the Moor\" by Kevin MacLeod (https://incompetech.com/)
 License: CC BY (http://creativecommons.org/licenses/by/4.0/)
-\"Maroon Font\" by Peter Olexa of dafont.com"
+\"Maroon Font\" by Peter Olexa of dafont.com
+\"LightClunk1.wav\" by BMacZero of Freesound.org"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="audio_start" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
