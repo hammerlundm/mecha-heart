@@ -28,6 +28,11 @@ func _process(delta):
 	v2.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	v2.y = Input.get_action_strength("move_back") - Input.get_action_strength("move_forward")
 	v2 = v2.normalized()
+	if v2.length_squared() > 0.2 and not $footsteps.playing:
+		$footsteps.play()
+	elif v2.length_squared() < 0.2:
+		$footsteps.stop()
+		pass
 	var asdf = v2.x * transform.basis.x + v2.y * transform.basis.z
 	var flat = asdf - (asdf.dot(Vector3(0, 1, 0)) * Vector3(0, 1, 0))
 	v += flat.normalized() * delta * MOVE_SPEED
@@ -56,9 +61,9 @@ func _process(delta):
 							print("you win!")
 							get_tree().quit()
 						object = null
+						break
 	v *= FRICTION / (delta + 0.01)
 	move_and_slide(v)
-	
 
 func _input(event):
 	if event is InputEventMouseMotion:

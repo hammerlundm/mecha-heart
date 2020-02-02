@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Heartbeat4.ogg-db0e505eacbf557638b240a79b576d12.oggstr"
+
+[deps]
+
+source_file="res://sounds/Heartbeat4.ogg"
+dest_files=[ "res://.import/Heartbeat4.ogg-db0e505eacbf557638b240a79b576d12.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

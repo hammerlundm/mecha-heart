@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Heartbeat_long.ogg-f60369745c1b6258fb180844c149c171.oggstr"
+
+[deps]
+
+source_file="res://sounds/Heartbeat_long.ogg"
+dest_files=[ "res://.import/Heartbeat_long.ogg-f60369745c1b6258fb180844c149c171.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/player.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://images/dot.bmp" type="Texture" id=2]
+[ext_resource path="res://sounds/Footsteps3.ogg" type="AudioStream" id=3]
+[ext_resource path="res://sounds/Ambient_Revised.ogg" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -23,8 +25,13 @@ shape = SubResource( 1 )
 modulate = Color( 1, 1, 1, 0.282353 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 951.0
+margin_top = 530.0
+margin_right = -950.0
+margin_bottom = -531.0
 texture = ExtResource( 2 )
-stretch_mode = 4
+expand = true
+stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -34,3 +41,11 @@ __meta__ = {
 [node name="CollisionShape" type="CollisionShape" parent="reach"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0 )
 shape = SubResource( 2 )
+
+[node name="footsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+autoplay = true
