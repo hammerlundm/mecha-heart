@@ -13,6 +13,7 @@ var old_pos = Vector2(0, 0)
 var object = null
 var targetable = true
 var current_health = HEALTH
+var points = 0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -49,6 +50,11 @@ func _process(delta):
 			for part in heart:
 				if part.selected:
 					if part.place(object):
+						points += 1
+						if points >= 3:
+							#TODO: add real win state
+							print("you win!")
+							get_tree().quit()
 						object = null
 	v *= FRICTION / (delta + 0.01)
 	move_and_slide(v)

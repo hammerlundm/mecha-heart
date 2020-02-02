@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/heartticker2.obj-877a9aec31a65819f6967e57e36c769d.mesh"
+
+[deps]
+
+files=[ "res://.import/heartticker2.obj-877a9aec31a65819f6967e57e36c769d.mesh" ]
+
+source_file="res://heartticker2.obj"
+dest_files=[ "res://.import/heartticker2.obj-877a9aec31a65819f6967e57e36c769d.mesh", "res://.import/heartticker2.obj-877a9aec31a65819f6967e57e36c769d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

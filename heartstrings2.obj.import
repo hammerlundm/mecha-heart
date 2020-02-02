@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/heartstrings2.obj-b51b90aecd11204ab0dce55b81adcba8.mesh"
+
+[deps]
+
+files=[ "res://.import/heartstrings2.obj-b51b90aecd11204ab0dce55b81adcba8.mesh" ]
+
+source_file="res://heartstrings2.obj"
+dest_files=[ "res://.import/heartstrings2.obj-b51b90aecd11204ab0dce55b81adcba8.mesh", "res://.import/heartstrings2.obj-b51b90aecd11204ab0dce55b81adcba8.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
