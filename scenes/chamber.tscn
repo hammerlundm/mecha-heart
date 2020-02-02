@@ -1,8 +1,17 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=26 format=2]
 
+[ext_resource path="res://materials/bronze.tres" type="Material" id=1]
 [ext_resource path="res://scenes/HEARTMechanics.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/HEARTOrganic.tscn" type="PackedScene" id=3]
 [ext_resource path="res://materials/wall.tres" type="Material" id=4]
+[ext_resource path="res://scenes/gear_part.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/strings_part.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/heart.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/HEARTGrate.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/object.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/HEARTValve.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/ticker_part.tscn" type="PackedScene" id=11]
+[ext_resource path="res://heartvalve.obj" type="ArrayMesh" id=12]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube.008"
@@ -170,3 +179,29 @@ transform = Transform( 1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, -1.82103, 0.309718 )
 [node name="HEARTOrganic" parent="Heart" instance=ExtResource( 3 )]
 
 [node name="HEARTMechanics" parent="Heart" instance=ExtResource( 2 )]
+
+[node name="strings" parent="Heart" instance=ExtResource( 7 )]
+part_name = "strings"
+part_scene = ExtResource( 6 )
+
+[node name="grate" parent="Heart" instance=ExtResource( 7 )]
+part_name = "grate"
+part_scene = ExtResource( 8 )
+
+[node name="gear" parent="Heart" instance=ExtResource( 7 )]
+part_name = "gear"
+part_scene = ExtResource( 5 )
+
+[node name="ticker" parent="Heart" instance=ExtResource( 7 )]
+part_name = "ticker"
+part_scene = ExtResource( 11 )
+
+[node name="valve" parent="Heart" instance=ExtResource( 7 )]
+part_name = "valve"
+part_scene = ExtResource( 10 )
+
+[node name="object" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.342777, 12.4025 )
+part_name = "valve"
+mesh = ExtResource( 12 )
+mat = ExtResource( 1 )

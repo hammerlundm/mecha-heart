@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/HEARTGrate.obj-5a41e9cbef12d04d582bf7e1fb1cbc18.mesh"
+
+[deps]
+
+files=[ "res://.import/HEARTGrate.obj-5a41e9cbef12d04d582bf7e1fb1cbc18.mesh" ]
+
+source_file="res://HEARTGrate.obj"
+dest_files=[ "res://.import/HEARTGrate.obj-5a41e9cbef12d04d582bf7e1fb1cbc18.mesh", "res://.import/HEARTGrate.obj-5a41e9cbef12d04d582bf7e1fb1cbc18.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

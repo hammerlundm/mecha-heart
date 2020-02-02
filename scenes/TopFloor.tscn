@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://materials/wall.tres" type="Material" id=1]
+[ext_resource path="res://materials/top_floor.tres" type="Material" id=1]
 [ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=2]
 
 [sub_resource type="ConcavePolygonShape" id=1]
@@ -227,3 +227,4 @@ curve = SubResource( 14 )
 
 [node name="enemy" parent="Path/PathFollow" instance=ExtResource( 2 )]
 transform = Transform( -1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, 0, 0, 0 )
+MOVE_SPEED = 5.0
