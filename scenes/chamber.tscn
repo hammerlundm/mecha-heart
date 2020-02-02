@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
+[ext_resource path="res://sounds/Heartbeat1.ogg" type="AudioStream" id=1]
 [ext_resource path="res://scenes/HEARTMechanics.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/HEARTOrganic.tscn" type="PackedScene" id=3]
 [ext_resource path="res://materials/wall.tres" type="Material" id=4]
@@ -7,6 +8,7 @@
 [ext_resource path="res://scenes/strings_part.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/heart.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/HEARTGrate.tscn" type="PackedScene" id=8]
+[ext_resource path="res://sounds/ObjectClunk.ogg" type="AudioStream" id=9]
 [ext_resource path="res://scenes/HEARTValve.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/ticker_part.tscn" type="PackedScene" id=11]
 
@@ -119,6 +121,7 @@ data = PoolVector3Array( -15.2061, 14.0913, 5.8506, -15.2061, 13.5604, 5.8506, -
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="Stair4" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00859261, 0.0236454, -0.0023613 )
 mesh = SubResource( 1 )
 material/0 = ExtResource( 4 )
 
@@ -196,3 +199,13 @@ part_scene = ExtResource( 11 )
 [node name="valve" parent="Heart" instance=ExtResource( 7 )]
 part_name = "valve"
 part_scene = ExtResource( 10 )
+
+[node name="heartbeat" type="AudioStreamPlayer3D" parent="Heart"]
+transform = Transform( 0.769231, 0, 0, 0, 0.769231, 0, 0, 0, 0.769231, 0, 6.50646, 0 )
+stream = ExtResource( 1 )
+unit_db = 1.0
+unit_size = 15.0
+autoplay = true
+
+[node name="objectClunk" type="AudioStreamPlayer" parent="Heart"]
+stream = ExtResource( 9 )

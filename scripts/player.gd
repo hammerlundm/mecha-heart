@@ -6,6 +6,8 @@ export(float) var FRICTION = 0.01
 export(float) var GRAVITY = 1000
 export(float) var HEALTH = 3
 
+var tracks = [preload("res://sounds/Heartbeat1.ogg"), preload("res://sounds/Heartbeat2.ogg"), preload("res://sounds/Heartbeat3.ogg"), preload("res://sounds/Heartbeat4.ogg"), preload("res://sounds/Heartbeat5.ogg"), preload("res://sounds/Heartbeat6.ogg")]
+
 var v = Vector3(0, 0, 0)
 var angle = Vector2(0, 0)
 var old_pos = Vector2(0, 0)
@@ -56,7 +58,10 @@ func _process(delta):
 				if part.selected:
 					if part.place(object):
 						points += 1
-						if points >= 3:
+						$"../FinalChamber/Heart/objectClunk".play()
+						$"../FinalChamber/Heart/heartbeat".stream = tracks[points]
+						$"../FinalChamber/Heart/heartbeat".play()
+						if points >= 5:
 							get_tree().change_scene("res://scenes/win.tscn")
 						object = null
 						break
