@@ -65,4 +65,5 @@ material/0 = SubResource( 4 )
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03521, 0.685516 )
 light_color = Color( 0.858824, 0.815686, 0.65098, 1 )
-omni_range = 20.0
+light_bake_mode = 2
+omni_range = 30.0
